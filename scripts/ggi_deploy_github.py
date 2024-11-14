@@ -180,12 +180,8 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
             ggi_pages_url = "https://tbd.com" #params['CI_PAGES_URL']
             desc = (
                 'Your own Good Governance Initiative project.\n\n'
-                'Here you will find '
                 f'[**your dashboard**]({ggi_pages_url})\n'
-                f'and the [**GitHub Project Board**]({ggi_activities_url}) with all activities describing the local GGI '
-                f'deployment, based on the version {ggi_handbook_version} of the [GGI handbook]('
-                f'https://ospo-alliance.org/ggi/)\n\n'
-                'For more information please see the official project home page at https://ospo-alliance.org/'
+                f'[**GitHub Project Board**]({ggi_activities_url})\n\n'
             )
             print(f"\nNew description:\n<<<---------\n{desc}\n--------->>>\n")
 
