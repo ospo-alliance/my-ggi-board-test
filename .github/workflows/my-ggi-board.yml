@@ -22,7 +22,7 @@ jobs:
         env:
           GGI_GITHUB_TOKEN: ${{ secrets.GGI_GITHUB_TOKEN }}
         run: |
-          python scripts/ggi_deploy_github.py -a -b -d -p
+          python scripts/ggi_deploy_github.py -a -d -p
   update-website:
     name: Update website
     needs: deploy-ggi
