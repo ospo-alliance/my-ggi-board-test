@@ -179,9 +179,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
             ggi_handbook_version = metadata["handbook_version"]
             ggi_pages_url = "https://tbd.com" #params['CI_PAGES_URL']
             desc = (
-                'Your own Good Governance Initiative project.\n\n'
-                f'[**your dashboard**]({ggi_pages_url})\n'
-                f'[**GitHub Project Board**]({ggi_activities_url})\n\n'
+                'Your own Good Governance Initiative project.'
             )
             print(f"\nNew description:\n<<<---------\n{desc}\n--------->>>\n")
 
