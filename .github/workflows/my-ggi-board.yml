@@ -20,7 +20,7 @@ jobs:
           python -m pip install -r requirements.txt
       - name: GGI Deploy
         run: |
-          python scripts/ggi_deploy_github.py -a -b -d -p --github
+          python scripts/ggi_deploy_github.py -a -b -d -p
   update-website:
     name: Update website
     needs: deploy-ggi
@@ -36,5 +36,5 @@ jobs:
           python -m pip install -r requirements.txt
       - name: GGI Update website
         run: |
-          python scripts/ggi_update_website_github.py --github
+          python scripts/ggi_update_website_github.py
 
