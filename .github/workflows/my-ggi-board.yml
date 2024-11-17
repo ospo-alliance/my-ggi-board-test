@@ -44,7 +44,7 @@ jobs:
   deploy:
     name: Deploy Pages
     runs-on: ubuntu-latest
-    needs: build
+    needs: deploy-ggi
 
     steps:
     - name: Checkout repository
