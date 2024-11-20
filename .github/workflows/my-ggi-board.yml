@@ -2,6 +2,7 @@
 name: My GGI Deploy deployment
 run-name: Deploying your own GGI!
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
