@@ -54,7 +54,7 @@ def retrieve_env():
         exit(1)
 
     params['GGI_PAGES_URL']= "https://ospo-alliance.github.io/" + params['github_project']
-    params['GGI_ACTIVITIES_URL']= "https://github.com/ospo-alliance/"+params['github_project']+"/issues"
+    params['GGI_ACTIVITIES_URL']= "https://github.com/"+params['github_project']+"/issues"
 
     return params
 
