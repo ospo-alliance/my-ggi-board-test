@@ -51,6 +51,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Verify updated website files
+      run: ls -la ./web
+
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v3
       with:
