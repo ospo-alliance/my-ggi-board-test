@@ -127,7 +127,7 @@ def retrieve_github_issues(params: dict):
 
         print(f"- {i.id} - {a_id} - {i.title} - {i.url} - {i.updated_at}.")
 
-        return issues, tasks, hist
+    return issues, tasks, hist
 
 
 def main():

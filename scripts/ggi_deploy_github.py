@@ -12,13 +12,14 @@
 """
 
 """
+import time
 import urllib.parse
 
 import requests
 
 from ggi_deploy import *
 
-from github import Github
+from github import Github, GithubException
 from github import Auth
 
 
@@ -235,11 +236,18 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
 
                 print(f"  - Issue: {activity['name']:<60} Labels: {labels}")
                 # Création de l'issue
-                issue = repo.create_issue(
-                    title=activity['name'],
-                    body=extract_sections(args, init_scorecard, activity),
-                    labels=labels
-                )
+                try:
+                    issue = repo.create_issue(
+                        title=activity['name'],
+                        body=extract_sections(args, init_scorecard, activity),
+                        labels=labels
+                    )
+                    time.sleep(2)
+                except GithubException as e:
+                    print(f"Status: {e.status}, Data: {e.data}")
+
+
+
 
     #
     # Create Goals board
