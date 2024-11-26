@@ -184,7 +184,10 @@ def main():
         with open('web/content/_index.md', 'r') as file:
             file_content = file.read()
             print(file_content)
-
+    except FileNotFoundError:
+        print('not found')
+    except Exception as e:
+        print('an error occurred')
     print("Done.")
     
 
