@@ -225,9 +225,7 @@ def write_data_points(issues, params):
     activities_dataset = []
     print(issues)
     for index, issue in issues.iterrows():
-        # XXX TODO
-        issue_id = issue['issue_id']
-        status = issue['state']
+        activity_id = issue['activity_id']
         title = issue['title']
         tasks_done = issue['tasks_done']
         tasks_total = issue['tasks_total']
@@ -237,7 +235,7 @@ def write_data_points(issues, params):
             if tasks_done == tasks_total:
                 status = "Completed"
 
-        activities_dataset.append([issue_id, status, title, tasks_done, tasks_total])
+        activities_dataset.append([activity_id, status, title, tasks_done, tasks_total])
 
     with open('web/content/includes/activities.js.inc', 'w') as f:
         f.write(str(activities_dataset))
