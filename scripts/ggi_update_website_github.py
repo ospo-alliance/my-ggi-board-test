@@ -182,8 +182,8 @@ def main():
             update_keywords(file, keywords)
     try:
         with open('web/content/_index.md', 'r') as file:
-        file_content = file.read()
-        print(&quot;web/content/_index.md\n&quot;, file_content)
+            file_content = file.read()
+            print(&quot;web/content/_index.md\n&quot;, file_content)
 
     print("Done.")
     
