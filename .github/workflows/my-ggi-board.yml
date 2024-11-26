@@ -42,24 +42,32 @@ jobs:
           GGI_GITHUB_TOKEN: ${{ secrets.GGI_GITHUB_TOKEN }}
         run: |
           python scripts/ggi_update_website_github.py
+  deploy:
+    name: Deploy Pages
+    runs-on: ubuntu-latest
+    needs: update-website
 
-      - name: Verify updated website files
-        run: ls -la ./web
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Set up Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "latest"
-          extended: true
+    - name: Verify updated website files
+      run: ls -la ./web
+    -
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: "latest"
+        extended: true
 
-      - name: Build Hugo site
-        run: |
-          cd web
-          hugo
-          cd -
+    - name: Build Hugo site
+      run: |
+        cd web
+        hugo
+        cd -
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GGI_GITHUB_TOKEN }}
-          publish_dir: ./web/public
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GGI_GITHUB_TOKEN }}
+        publish_dir: ./web/public
