@@ -48,9 +48,6 @@ jobs:
     needs: update-website
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
     - name: Verify updated website files
       run: ls -la ./web
 
