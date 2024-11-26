@@ -48,9 +48,6 @@ jobs:
     needs: update-website
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v3
       with:
