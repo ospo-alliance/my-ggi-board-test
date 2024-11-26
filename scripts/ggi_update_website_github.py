@@ -180,8 +180,13 @@ def main():
     for file in files:
         if os.path.isfile(file):
             update_keywords(file, keywords)
+    try:
+        with open('web/content/_index.md', 'r') as file:
+        file_content = file.read()
+        print(&quot;web/content/_index.md\n&quot;, file_content)
 
     print("Done.")
+    
 
 
 if __name__ == '__main__':
