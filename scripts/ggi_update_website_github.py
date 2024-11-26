@@ -53,8 +53,8 @@ def retrieve_env():
         print("- Cannot find env var GGI_GITHUB_TOKEN. Please set it and re-run me.")
         exit(1)
 
-    params['GGI_PAGES_URL']= "https://ospo-alliance.github.io/" + params['github_project']
-    params['GGI_ACTIVITIES_URL']= "https://github.com/"+params['github_project']+"/issues"
+    params['GGI_PAGES_URL']= "https://ospo-alliance.github.io/my-ggi-board-test/"
+    params['GGI_ACTIVITIES_URL']= "https://github.com/ospo-alliance/my-ggi-board-test/issues"
 
     return params
 
