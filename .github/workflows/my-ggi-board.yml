@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: updated-website
-          path: ./web
+          path: ./
   deploy:
     name: Deploy Pages
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: updated-website
-        path: ./web
+        path: ./
 
     - name: Verify updated website files (deploy)
       run: ls -la ./
