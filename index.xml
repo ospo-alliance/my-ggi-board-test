@@ -1,34 +1,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Your Good Governance initiative on My Good Governance Initiative</title>
-    <link>https://ospo-alliance.github.io/my-ggi-board-test/</link>
+    <link>%5BGGI_PAGES_URL%5D/</link>
     <description>Recent content in Your Good Governance initiative on My Good Governance Initiative</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2024 14:58:14 +0000</lastBuildDate><atom:link href="https://ospo-alliance.github.io/my-ggi-board-test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-    <title>Open source procurement policy</title>
-    <link>https://ospo-alliance.github.io/my-ggi-board-test/scorecards/activity_ggi-a-43/</link>
-    <pubDate>Wed, 20 Nov 2024 14:58:14 +0000</pubDate>
-    
-    <guid>https://ospo-alliance.github.io/my-ggi-board-test/scorecards/activity_ggi-a-43/</guid>
-    <description>
-        &lt;p&gt;Link to Issue: &lt;a href=&#39;https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/20&#39; class=&#39;w3-text-grey&#39; style=&#39;float:right&#39;&gt;[ GGI-A-43 ]&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Tasks: 0 done / 0 total.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Customized description&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Scope of what has to be done.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Opportunity assessment&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Why is this activity relevant?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;What we aim to achieve in this iteration.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Technologies, tools and products used in the Activity.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Operational Notes&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Approach, method to progress in the Activity&lt;/p&gt;
-
-    </description>
-    </item>
-    
+    <language>en-us</language><atom:link href="%5BGGI_PAGES_URL%5D/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

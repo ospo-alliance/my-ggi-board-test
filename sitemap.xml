@@ -2,17 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ospo-alliance.github.io/my-ggi-board-test/scorecards/activity_ggi-a-43/</loc>
-    <lastmod>2024-11-20T14:58:14+00:00</lastmod>
+    <loc>%5BGGI_PAGES_URL%5D/categories/</loc>
   </url><url>
-    <loc>https://ospo-alliance.github.io/my-ggi-board-test/scorecards/</loc>
-    <lastmod>2024-11-20T14:58:14+00:00</lastmod>
+    <loc>%5BGGI_PAGES_URL%5D/scorecards/</loc>
   </url><url>
-    <loc>https://ospo-alliance.github.io/my-ggi-board-test/</loc>
-    <lastmod>2024-11-20T14:58:14+00:00</lastmod>
+    <loc>%5BGGI_PAGES_URL%5D/tags/</loc>
   </url><url>
-    <loc>https://ospo-alliance.github.io/my-ggi-board-test/categories/</loc>
-  </url><url>
-    <loc>https://ospo-alliance.github.io/my-ggi-board-test/tags/</loc>
+    <loc>%5BGGI_PAGES_URL%5D/</loc>
   </url>
 </urlset>
