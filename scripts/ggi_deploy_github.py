@@ -184,7 +184,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     # Connecting to the GitHub instance.
 
     print(f"\n# Retrieving project from GitHub at {params['github_repo_url']}.")
-    repo = g.get_repo(params["github_project"])
+    repo = g.get_repo(params['github_project'])
 
     # Update current project description with Website URL
     # TODO make this works
