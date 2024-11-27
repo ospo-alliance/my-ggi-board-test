@@ -216,7 +216,7 @@ def setup_gitlab(metadata, params: dict, init_scorecard, args: dict):
             print(f" Ignore, already {nb_pipelines} scheduled pipeline(s)")
         else:
             sched = project.pipelineschedules.create({
-                'ref': 'main',
+                'ref': 'refs/heads/main',
                 'description': 'Nightly Update',
                 'cron': '0 3 * * *'})
             print(f" Pipeline created: '{sched.description}'")
