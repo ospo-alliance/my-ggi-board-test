@@ -150,7 +150,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
         print(f"- Using GitHub on-premise host {params['github_url']} ")
         # Github Enterprise with custom hostname
         params['github_url'] = f"{params['github_url']}/api/v3"
-        g = Github(auth=auth, base_url=github_url)
+        g = Github(auth=auth, base_url=params['github_url'])
     else:
         # Public Web Github
         print("- Using public GitHub instance.")
