@@ -88,15 +88,14 @@ def setup_gitlab(metadata, params: dict, init_scorecard, args: dict):
         exit(1)
 
     params['gitlab_repo_url'] = urllib.parse.urljoin(params['gitlab_url'], params['gitlab_project'])
-    params['gitlab_activities_url'] = os.path.join(params['gitlab_repo_url'] + '/', '-/boards')
+    params['gitlab_activities_url'] = urllib.parse.urljoin(params['gitlab_repo_url'], '/', '-/boards')
     print("Configuration:")
-    print("URL     : " + params['gitlab_url'])
-    print("Project : " + params['gitlab_project'])
-    print("Full URL: " + params['gitlab_repo_url'])
+    print("URL       : " + params['gitlab_url'])
+    print("Project   : " + params['gitlab_project'])
+    print("Full URL  : " + params['gitlab_repo_url'])
     print("Activities: " + params['gitlab_activities_url'])
 
-    print(f"\n# Connection to GitLab at {params['gitlab_url']} " +
-          f"- {params['gitlab_project']}.")
+    print(f"\n# Connection to GitLab at {params['gitlab_url']} ")
     gl = gitlab.Gitlab(url=params['gitlab_url'],
                        per_page=50,
                        private_token=params['gitlab_token'])
