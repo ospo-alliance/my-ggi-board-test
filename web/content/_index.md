@@ -1,6 +1,5 @@
 ---
 title: Your Good Governance initiative
-date: [GGI_CURRENT_DATE]
 layout: default
 ---
 
