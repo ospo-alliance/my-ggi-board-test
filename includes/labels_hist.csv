@@ -1,1 +1,61 @@
 time,issue_id,event_id,type,author,action,url
+2024-11-26 20:51:32+00:00,135,15442037558,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/135
+2024-11-26 20:51:32+00:00,135,15442037562,label,Sebastienlejeune,labeled Strategy Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/135
+2024-11-26 20:51:29+00:00,134,15442037199,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/134
+2024-11-26 20:51:29+00:00,134,15442037201,label,Sebastienlejeune,labeled Strategy Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/134
+2024-11-26 20:51:26+00:00,133,15442036818,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/133
+2024-11-26 20:51:26+00:00,133,15442036820,label,Sebastienlejeune,labeled Strategy Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/133
+2024-11-26 20:51:24+00:00,132,15442036448,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/132
+2024-11-26 20:51:24+00:00,132,15442036451,label,Sebastienlejeune,labeled Strategy Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/132
+2024-11-26 20:51:21+00:00,131,15442036067,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/131
+2024-11-26 20:51:21+00:00,131,15442036074,label,Sebastienlejeune,labeled Strategy Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/131
+2024-11-26 20:50:17+00:00,130,15442026548,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/130
+2024-11-26 20:50:17+00:00,130,15442026555,label,Sebastienlejeune,labeled Engagement Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/130
+2024-11-26 20:50:14+00:00,129,15442026177,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/129
+2024-11-26 20:50:14+00:00,129,15442026181,label,Sebastienlejeune,labeled Engagement Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/129
+2024-11-26 20:50:11+00:00,128,15442025757,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/128
+2024-11-26 20:50:11+00:00,128,15442025762,label,Sebastienlejeune,labeled Engagement Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/128
+2024-11-26 20:50:11+00:00,128,15442025770,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/128
+2024-11-26 20:50:08+00:00,127,15442025373,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/127
+2024-11-26 20:50:08+00:00,127,15442025378,label,Sebastienlejeune,labeled Engagement Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/127
+2024-11-26 20:50:05+00:00,126,15442024929,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/126
+2024-11-26 20:50:05+00:00,126,15442024934,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/126
+2024-11-26 20:50:05+00:00,126,15442024939,label,Sebastienlejeune,labeled Engagement Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/126
+2024-11-26 20:50:02+00:00,125,15442024496,label,Sebastienlejeune,labeled Culture Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/125
+2024-11-26 20:50:02+00:00,125,15442024500,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/125
+2024-11-26 20:50:02+00:00,125,15442024508,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/125
+2024-11-26 20:49:59+00:00,124,15442024044,label,Sebastienlejeune,labeled Culture Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/124
+2024-11-26 20:49:59+00:00,124,15442024047,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/124
+2024-11-26 20:49:56+00:00,123,15442023652,label,Sebastienlejeune,labeled Culture Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/123
+2024-11-26 20:49:56+00:00,123,15442023658,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/123
+2024-11-26 20:49:56+00:00,123,15442023665,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/123
+2024-11-26 20:49:53+00:00,122,15442023200,label,Sebastienlejeune,labeled Culture Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/122
+2024-11-26 20:49:53+00:00,122,15442023210,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/122
+2024-11-26 20:49:53+00:00,122,15442023215,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/122
+2024-11-26 20:49:50+00:00,121,15442022795,label,Sebastienlejeune,labeled Culture Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/121
+2024-11-26 20:49:50+00:00,121,15442022800,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/121
+2024-11-26 20:49:50+00:00,121,15442022804,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/121
+2024-11-26 20:49:47+00:00,120,15442022427,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/120
+2024-11-26 20:49:47+00:00,120,15442022431,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/120
+2024-11-26 20:49:47+00:00,120,15442022435,label,Sebastienlejeune,labeled Trust Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/120
+2024-11-26 20:49:44+00:00,119,15442022019,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/119
+2024-11-26 20:49:44+00:00,119,15442022026,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/119
+2024-11-26 20:49:44+00:00,119,15442022029,label,Sebastienlejeune,labeled Trust Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/119
+2024-11-26 20:49:41+00:00,118,15442021546,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/118
+2024-11-26 20:49:41+00:00,118,15442021550,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/118
+2024-11-26 20:49:41+00:00,118,15442021554,label,Sebastienlejeune,labeled Trust Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/118
+2024-11-26 20:49:38+00:00,117,15442021167,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/117
+2024-11-26 20:49:38+00:00,117,15442021177,label,Sebastienlejeune,labeled Trust Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/117
+2024-11-26 20:49:35+00:00,116,15442020787,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/116
+2024-11-26 20:49:35+00:00,116,15442020792,label,Sebastienlejeune,labeled Trust Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/116
+2024-11-26 20:49:32+00:00,115,15442020359,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/115
+2024-11-26 20:49:32+00:00,115,15442020363,label,Sebastienlejeune,labeled Usage Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/115
+2024-11-26 20:49:29+00:00,114,15442019957,label,Sebastienlejeune,labeled Decision Maker,https://github.com/ospo-alliance/my-ggi-board-test/issues/114
+2024-11-26 20:49:29+00:00,114,15442019959,label,Sebastienlejeune,labeled Usage Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/114
+2024-11-26 20:49:27+00:00,113,15442019569,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/113
+2024-11-26 20:49:27+00:00,113,15442019573,label,Sebastienlejeune,labeled Usage Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/113
+2024-11-26 20:49:24+00:00,112,15442019161,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/112
+2024-11-26 20:49:24+00:00,112,15442019167,label,Sebastienlejeune,labeled Usage Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/112
+2024-11-26 20:49:21+00:00,111,15442018736,label,Sebastienlejeune,labeled Developer,https://github.com/ospo-alliance/my-ggi-board-test/issues/111
+2024-11-26 20:49:21+00:00,111,15442018742,label,Sebastienlejeune,labeled Team Leader,https://github.com/ospo-alliance/my-ggi-board-test/issues/111
+2024-11-26 20:49:21+00:00,111,15442018747,label,Sebastienlejeune,labeled Usage Goal,https://github.com/ospo-alliance/my-ggi-board-test/issues/111
