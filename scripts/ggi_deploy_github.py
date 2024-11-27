@@ -176,9 +176,9 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     if args.opt_projdesc:
         print("\n# Update Project description")
         if True or 'CI_PAGES_URL' in params:
-            ggi_activities_url = "https://tbd.com" #params['GGI_ACTIVITIES_URL']
+            ggi_activities_url = params['GGI_ACTIVITIES_URL']
             ggi_handbook_version = metadata["handbook_version"]
-            ggi_pages_url = "https://tbd.com" #params['CI_PAGES_URL']
+            ggi_pages_url = params['CI_PAGES_URL']
             desc = (
                 'Your own Good Governance Initiative project.'
             )
@@ -245,10 +245,6 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
                 except GithubException as e:
                     print(f"Status: {e.status}, Data: {e.data}")
 
-
-
-
-    #
     # Create Goals board
     if args.opt_board:
         # TODO : check why graphQL API does not work

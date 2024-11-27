@@ -142,7 +142,7 @@ def retrieve_github_issues(params: dict):
                 ]
                 hist.append(line)
 
-        print(f"- {i.id} - {a_id} - {i.title} - {i.url} - {i.updated_at}.")
+        #print(f"- {i.id} - {a_id} - {i.title} - {i.url} - {i.updated_at}.")
 
     return issues, tasks, hist
 
