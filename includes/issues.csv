@@ -1,7 +1,7 @@
 issue_id,activity_id,state,title,labels,updated_at,url,tasks_total,tasks_done
-2697731966,GGI-A-37,open,Open source enabling digital transformation,"Decision Maker,Not Selected,Strategy Goal",2024-11-27 08:58:00+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/160,0,0
+2697731966,GGI-A-37,open,Open source enabling digital transformation,"Decision Maker,Done,Strategy Goal",2024-11-27 09:05:25+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/160,0,0
 2697731845,GGI-A-36,open,Open source enabling innovation,"Decision Maker,Not Selected,Strategy Goal",2024-11-27 08:57:57+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/159,0,0
-2697731737,GGI-A-35,open,Open source and digital sovereignty,"Decision Maker,Not Selected,Strategy Goal",2024-11-27 08:57:54+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/158,0,0
+2697731737,GGI-A-35,open,Open source and digital sovereignty,"Decision Maker,In Progress,Strategy Goal",2024-11-27 09:05:40+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/158,0,0
 2697731618,GGI-A-34,open,C-Level awareness,"Decision Maker,Not Selected,Strategy Goal",2024-11-27 08:57:52+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/157,0,0
 2697731454,GGI-A-16,open,Setup a strategy for corporate open source governance,"Decision Maker,Not Selected,Strategy Goal",2024-11-27 08:57:49+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/156,0,0
 2697725770,GGI-A-43,open,Open source procurement policy,"Decision Maker,Not Selected,Engagement Goal",2024-11-27 08:55:43+00:00,https://api.github.com/repos/ospo-alliance/my-ggi-board-test/issues/155,0,0
