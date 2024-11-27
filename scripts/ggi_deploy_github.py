@@ -132,7 +132,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     if 'GGI_GITHUB_URL' in os.environ:
         params['github_url'] = os.environ['GGI_GITHUB_URL']
         print("- Using URL from env var 'GGI_GITHUB_URL'")
-    elif 'github_url' in params and params['github_url'] != '':
+    elif 'github_url' in params and params['github_url'] != None:
         print("- Using URL from configuration file")
     else:
         params['github_url'] = public_github
