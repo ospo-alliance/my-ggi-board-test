@@ -220,7 +220,6 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
         #   consider that all Issues exist and do not add any.
         open_issues = repo.get_issues(state='open')
         if open_issues.totalCount > 0:
-            # TODO better check for issues with labels
             print("Ignore, Issues already exist")
         else:
             for activity in metadata['activities']:
