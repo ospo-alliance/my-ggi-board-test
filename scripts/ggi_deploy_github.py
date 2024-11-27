@@ -175,19 +175,15 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     # TODO make this works
     if args.opt_projdesc:
         print("\n# Update Project description")
-        if True or 'CI_PAGES_URL' in params:
-            ggi_activities_url = params['GGI_ACTIVITIES_URL']
-            ggi_handbook_version = metadata["handbook_version"]
-            ggi_pages_url = params['CI_PAGES_URL']
-            desc = (
-                'Your own Good Governance Initiative project.'
-            )
-            print(f"\nNew description:\n<<<---------\n{desc}\n--------->>>\n")
 
-            # Update the repository description
-            repo.edit(description=desc)
-        else:
-            print("Cannot find environment variable 'CI_PAGES_URL', skipping.")
+        desc = (
+            'Your own Good Governance Initiative project.'
+        )
+        print(f"\nNew description:\n<<<---------\n{desc}\n--------->>>\n")
+
+        # Update the repository description
+        repo.edit(description=desc)
+
 
     #
     # Create labels & activities
