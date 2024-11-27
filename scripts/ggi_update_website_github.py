@@ -125,6 +125,23 @@ def retrieve_github_issues(params: dict):
         #             n_action, i.web_url]
         #     hist.append(line)
 
+        for event in i.get_events():
+            if event.event == "labeled" or event.event == "unlabeled":
+                n_type = 'label'
+                label = event.label.name if event.label else ''
+                n_action = f"{event.event} {label}"
+                user = event.actor.login if event.actor else 'unknown'
+                line = [
+                    event.created_at,  # Date de l'événement
+                    i.number,  # Numéro de l'issue
+                    event.id,  # ID de l'événement
+                    n_type,  # Type d'événement (toujours 'label')
+                    user,  # Utilisateur qui a déclenché l'événement
+                    n_action,  # Action effectuée (labeled/unlabeled)
+                    i.html_url  # URL de l'issue
+                ]
+                hist.append(line)
+
         print(f"- {i.id} - {a_id} - {i.title} - {i.url} - {i.updated_at}.")
 
     return issues, tasks, hist
