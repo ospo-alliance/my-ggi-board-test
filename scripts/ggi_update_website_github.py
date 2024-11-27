@@ -109,6 +109,8 @@ def retrieve_github_issues(params: dict):
         short_desc = '\n'.join(description)
         tasks_total = len(a_tasks)
         tasks_done = len([t for t in a_tasks if t['is_completed']])
+        #TODO comprendre pourquoi i.state et pas le label de progression
+        #TODO comprendre pourquoi tasks_total et done sont mal calculés pour GitHub
         issues.append([i.id, a_id, i.state, i.title, ','.join([label.name for label in i.labels]),
                        i.updated_at, i.url, short_desc, workflow,
                        tasks_total, tasks_done])
