@@ -53,9 +53,8 @@ def retrieve_env():
         print("- Cannot find env var GGI_GITHUB_TOKEN. Please set it and re-run me.")
         exit(1)
 
-    #TODO : to be done through GitHub pages
-    params['GGI_PAGES_URL']= ""
-    params['GGI_ACTIVITIES_URL']= ""
+    params['GGI_PAGES_URL']= "https://ospo-alliance.github.io/my-ggi-board-test/"
+    params['GGI_ACTIVITIES_URL']= "https://github.com/ospo-alliance/my-ggi-board-test/issues"
 
     return params
 
@@ -110,6 +109,8 @@ def retrieve_github_issues(params: dict):
         short_desc = '\n'.join(description)
         tasks_total = len(a_tasks)
         tasks_done = len([t for t in a_tasks if t['is_completed']])
+        #TODO comprendre pourquoi i.state et pas le label de progression
+        #TODO comprendre pourquoi tasks_total et done sont mal calculés pour GitHub
         issues.append([i.id, a_id, i.state, i.title, ','.join([label.name for label in i.labels]),
                        i.updated_at, i.url, short_desc, workflow,
                        tasks_total, tasks_done])
@@ -126,9 +127,26 @@ def retrieve_github_issues(params: dict):
         #             n_action, i.web_url]
         #     hist.append(line)
 
-        print(f"- {i.id} - {a_id} - {i.title} - {i.url} - {i.updated_at}.")
+        for event in i.get_events():
+            if event.event == "labeled" or event.event == "unlabeled":
+                n_type = 'label'
+                label = event.label.name if event.label else ''
+                n_action = f"{event.event} {label}"
+                user = event.actor.login if event.actor else 'unknown'
+                line = [
+                    event.created_at,  # Date de l'événement
+                    i.number,  # Numéro de l'issue
+                    event.id,  # ID de l'événement
+                    n_type,  # Type d'événement (toujours 'label')
+                    user,  # Utilisateur qui a déclenché l'événement
+                    n_action,  # Action effectuée (labeled/unlabeled)
+                    i.html_url  # URL de l'issue
+                ]
+                hist.append(line)
 
-        return issues, tasks, hist
+        #print(f"- {i.id} - {a_id} - {i.title} - {i.url} - {i.updated_at}.")
+
+    return issues, tasks, hist
 
 
 def main():
@@ -181,8 +199,16 @@ def main():
     for file in files:
         if os.path.isfile(file):
             update_keywords(file, keywords)
-
+    try:
+        with open('web/content/_index.md', 'r') as file:
+            file_content = file.read()
+            print(file_content)
+    except FileNotFoundError:
+        print('not found')
+    except Exception as e:
+        print('an error occurred')
     print("Done.")
+    
 
 
 if __name__ == '__main__':
