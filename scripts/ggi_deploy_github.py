@@ -147,14 +147,14 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
         print("- Using default public URL")
 
     if params['github_url'].startswith(public_github):
+        # Public Web Github
+        print("- Using public GitHub instance.")
+        g = Github(auth=auth)
+    else:
         print(f"- Using GitHub on-premise host {params['github_url']} ")
         # Github Enterprise with custom hostname
         params['github_url'] = f"{params['github_url']}/api/v3"
         g = Github(auth=auth, base_url=params['github_url'])
-    else:
-        # Public Web Github
-        print("- Using public GitHub instance.")
-        g = Github(auth=auth)
 
     # Gett conf: Project
     if 'GGI_GITHUB_PROJECT' in os.environ:
