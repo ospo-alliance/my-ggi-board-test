@@ -54,8 +54,10 @@ def setup_gitlab(metadata, params: dict, init_scorecard, args: dict):
     """
 
     # Get conf: URL
-    # FIXME? : use 'CI_SERVER_URL' in os.environ ?
-    if 'GGI_GITLAB_URL' in os.environ:
+    if 'CI_SERVER_URL' in os.environ:
+        params['gitlab_url'] = os.environ['CI_SERVER_URL']
+        print("- Using URL from env var 'CI_SERVER_URL'")
+    elif 'GGI_GITLAB_URL' in os.environ:
         params['gitlab_url'] = os.environ['GGI_GITLAB_URL']
         print("- Using URL from env var 'GGI_GITLAB_URL'")
     elif 'gitlab_url' in params :
@@ -65,8 +67,10 @@ def setup_gitlab(metadata, params: dict, init_scorecard, args: dict):
         exit(1)
 
     # Get conf: Project
-    # FIXME? use 'CI_PROJECT_PATH' in os.environ ?
-    if 'GGI_GITLAB_PROJECT' in os.environ:
+    if 'CI_PROJECT_PATH' in os.environ:
+        params['gitlab_project'] = os.environ['CI_PROJECT_PATH']
+        print("- Using Project from env var 'CI_PROJECT_PATH'")
+    elif 'GGI_GITLAB_PROJECT' in os.environ:
         params['gitlab_project'] = os.environ['GGI_GITLAB_PROJECT']
         print("- Using Project from env var 'GGI_GITLAB_PROJECT'")
     elif 'gitlab_project' in params:
@@ -91,9 +95,6 @@ def setup_gitlab(metadata, params: dict, init_scorecard, args: dict):
     print("Full URL: " + params['gitlab_repo_url'])
     print("Activities: " + params['gitlab_activities_url'])
 
-    # Using an access token
-    auth = Auth.Token(params['gitlab_token'])
-    
     print(f"\n# Connection to GitLab at {params['gitlab_url']} " +
           f"- {params['gitlab_project']}.")
     gl = gitlab.Gitlab(url=params['gitlab_url'],
