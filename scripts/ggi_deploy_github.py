@@ -119,56 +119,70 @@ def create_project(owner_id, gh_token):
 def setup_github(metadata, params: dict, init_scorecard, args: dict):
     """
     Executes the following deployment sequence on a GitHub instance:
-    * Reads gitlab-specific variables.
+    * Reads github-specific variables.
     * Connect to GitHub
     * Create labels & activities
     * Create Goals board
     * Create schedule for pipeline
     """
 
-    # Get environment / vars.
+    # Get conf: URL
+    public_github="https://github.com"
+    if 'GGI_GITHUB_URL' in os.environ:
+        params['github_url'] = os.environ['GGI_GITHUB_URL']
+        print("- Using URL from env var 'GGI_GITHUB_URL'")
+    elif 'github_url' in params and params['github_url'] != 'null':
+        print("- Using URL from configuration file")
+    else
+        params['github_url'] = public_github
+        print("- Using default public URL")
 
-    if 'github_project' in params:
-        print(f"- Using GitHub project {params['github_project']} " +
-              "from configuration file.")
+    if params['github_url'].startswith(public_github):
+        print(f"- Using GitHub on-premise host {params['github_url']} ")
+        # Github Enterprise with custom hostname
+        params['github_url'] = f"{params['github_url']}/api/v3"
+        g = Github(auth=auth, base_url=github_url)
+    else:
+        # Public Web Github
+        print("- Using public GitHub instance.")
+        g = Github(auth=auth)
+
+    # Gett conf: Project
+    if 'GGI_GITHUB_PROJECT' in os.environ:
+        params['github_project'] = os.environ['GGI_GITHUB_PROJECT']
+        print("- Using Project from env var 'GGI_GITHUB_PROJECT'")
+    elif 'github_project' in params:
+        print(f"- Using Project from configuration file")
     else:
         print("I need a project (org + repo), e.g. ospo-alliance/" +
               "my-ggi-board. Exiting.")
         exit(1)
 
     if 'GGI_GITHUB_TOKEN' in os.environ:
-        print("- Using ggi_github_token from env var.")
-        params['GGI_GITHUB_TOKEN'] = os.environ['GGI_GITHUB_TOKEN']
+        print("- Using token from env var 'GGI_GITHUB_TOKEN'")
+        params['github_token'] = os.environ['GGI_GITHUB_TOKEN']
     else:
         print("- Cannot find env var GGI_GITHUB_TOKEN. Please set it and re-run me.")
         exit(1)
 
-    # Using an access token
-    auth = Auth.Token(params['GGI_GITHUB_TOKEN'])
+    params['github_repo_url'] = urllib.parse.urljoin(params['github_url'], params['github_project'])
 
-    headers =    {
-        "Authorization": f"Bearer {params['GGI_GITHUB_TOKEN']}",
+    print("Configuration:")
+    print("URL     : " + params['github_url'])
+    print("Project : " + params['github_project'])
+    print("Full URL: " + params['github_repo_url'])
+
+    # Using an access token
+    auth = Auth.Token(params['github_token'])
+
+    headers = {
+        "Authorization": f"Bearer {params['github_token']}",
         "Accept": "application/vnd.github.inertia-preview+json"  # Needed for project board access
     }
 
     # Connecting to the GitHub instance.
-    if 'github_host' in params and params['github_host'] != 'null':
-        print(f"- Using GitHub on-premise host {params['github_host']} " +
-              "from configuration file.")
-        # Github Enterprise with custom hostname
-        github_url = f"{params['github_host']}/api/v3"
-        g = Github(auth=auth,
-                   base_url=github_url)
-        params['GGI_GITHUB_URL'] = params['github_host']
-    else:
-        # Public Web Github
-        print("- Using public GitHub instance.")
-        g = Github(auth=auth)
-        params['GGI_GITHUB_URL'] = "https://github.com/"
 
-    params['GGI_GITHUB_URL'] = params['GGI_GITHUB_URL'] + "/" + params["github_project"]
-
-    print(f"\n# Retrieving project from GitHub at {params['GGI_GITHUB_URL']}.")
+    print(f"\n# Retrieving project from GitHub at {params['github_repo_url']}.")
     repo = g.get_repo(params["github_project"])
 
     # Update current project description with Website URL
@@ -253,7 +267,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
 
 
 def create_project_pygithub(params):
-    access_token = params['GGI_GITHUB_TOKEN']
+    access_token = params['github_token']
 
     from github import Github
     from github.GithubException import GithubException
@@ -299,7 +313,7 @@ def create_project_pygithub(params):
 def create_project_graphql(params):
     print(f"\n# Create Goals board: {ggi_board_name}")
     # Your GitHub token and the repo details
-    access_token = params['GGI_GITHUB_TOKEN']
+    access_token = params['github_token']
     headers = {'Authorization': f'bearer {access_token}'}
     graphql_url = 'https://api.github.com/graphql'
     repo_owner = 'Sebastienlejeune'
