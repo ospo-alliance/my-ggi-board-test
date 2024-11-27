@@ -6,7 +6,7 @@ layout: default
 
 {{% content "includes/initialisation.inc" %}}
 
-This dashboard tracks information from your [GGI board instance]([GGI_ACTIVITIES_URL]). See the [Activity timeline of the project]([GGI_URL]/activity) in GitLab.
+This dashboard tracks information from your [GGI board instance]([GGI_ACTIVITIES_URL]). See the [Activity timeline of the project]([GGI_URL]/activity).
 
 Please refer to the [official documentation](https://ospo-alliance.org/ggi).
 
