@@ -130,7 +130,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     if 'GGI_GITHUB_URL' in os.environ:
         params['github_url'] = os.environ['GGI_GITHUB_URL']
         print("- Using URL from env var 'GGI_GITHUB_URL'")
-    elif config_entry_name in params and params['github_url'] != 'null':
+    elif 'github_url' in params and params['github_url'] != 'null':
         print("- Using URL from configuration file")
     else
         params['github_url'] = public_github
@@ -146,7 +146,7 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
         print("- Using public GitHub instance.")
         g = Github(auth=auth)
 
-    # Git conf: Project
+    # Gett conf: Project
     if 'GGI_GITHUB_PROJECT' in os.environ:
         params['github_project'] = os.environ['GGI_GITHUB_PROJECT']
         print("- Using Project from env var 'GGI_GITHUB_PROJECT'")
@@ -164,7 +164,8 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
         print("- Cannot find env var GGI_GITHUB_TOKEN. Please set it and re-run me.")
         exit(1)
 
-    params['github_repo_url'] = params['github_url'] + "/" + params["github_project"]
+    params['github_repo_url'] = urllib.parse.urljoin(params['github_url'], params['github_project'])
+
     print("Configuration:")
     print("URL     : " + params['github_url'])
     print("Project : " + params['github_project'])
