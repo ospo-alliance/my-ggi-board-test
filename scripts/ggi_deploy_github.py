@@ -126,9 +126,17 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     * Create schedule for pipeline
     """
 
+    # Get conf: Token
+    if 'GGI_GITHUB_TOKEN' in os.environ:
+        print("- Using token from env var 'GGI_GITHUB_TOKEN'")
+        params['github_token'] = os.environ['GGI_GITHUB_TOKEN']
+    else:
+        print("- Cannot find env var GGI_GITHUB_TOKEN. Please set it and re-run me.")
+        exit(1)
+    auth = Auth.Token(params['github_token'])
+
     # Get conf: URL
     public_github="https://github.com"
-    print(f"params['github_url']={params['github_url']}")
     if 'GGI_GITHUB_URL' in os.environ:
         params['github_url'] = os.environ['GGI_GITHUB_URL']
         print("- Using URL from env var 'GGI_GITHUB_URL'")
@@ -159,12 +167,6 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
               "my-ggi-board. Exiting.")
         exit(1)
 
-    if 'GGI_GITHUB_TOKEN' in os.environ:
-        print("- Using token from env var 'GGI_GITHUB_TOKEN'")
-        params['github_token'] = os.environ['GGI_GITHUB_TOKEN']
-    else:
-        print("- Cannot find env var GGI_GITHUB_TOKEN. Please set it and re-run me.")
-        exit(1)
 
     params['github_repo_url'] = urllib.parse.urljoin(params['github_url'], params['github_project'])
 
@@ -173,8 +175,6 @@ def setup_github(metadata, params: dict, init_scorecard, args: dict):
     print("Project : " + params['github_project'])
     print("Full URL: " + params['github_repo_url'])
 
-    # Using an access token
-    auth = Auth.Token(params['github_token'])
 
     headers = {
         "Authorization": f"Bearer {params['github_token']}",
